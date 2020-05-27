@@ -1,0 +1,62 @@
+.msite{
+    position: relative;
+    top:50px;
+    background-image: linear-gradient(to right,yellow,#FFBD27);
+    .msite_item{
+      position: relative;
+      background-color: #fff;
+      width: 90%;
+      margin: 0 auto;
+      z-index: 10;
+      border-radius:15px 15px 0 0;
+      overflow: hidden;
+      .msite_nav
+        {.bottom-border-1px(#e4e4e4);
+        margin-top: 45px;
+        height: 200px;
+        background: #fff;
+        .swiper-container{
+             width: 100%;
+            height: 100%;
+            .swiper-wrapper
+            {width: 100%;
+            height: 100%;}
+            .swiper-slide
+               { display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                .link_to_food
+                {width: 25%;
+                .food_container
+                   { display: block;
+                    width: 100%;
+                    text-align: center;
+                    padding-bottom: 10px;
+                    font-size: 0;
+                    img
+                   { display: inline-block;
+                    width: 50px;
+                    height: 50px;}}
+                span
+                    {display: block;
+                    width: 100%;
+                    text-align: center;
+                    font-size: 13px;
+                    color: #666;
+                }}}
+            .swiper-pagination{
+            &>span.swiper-pagination-bullet-active{
+                background: yellow}}
+            }}
+   
+        }
+    .bc{
+        position: absolute;
+       width: 100%;
+       height: 100%;
+       top: 100px;
+       z-index: 1;
+       background-image:linear-gradient(rgba(255,255,255,0) ,rgba(255,255,255,1) 5%);
+    }
+}
