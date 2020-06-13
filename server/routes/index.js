@@ -83,7 +83,6 @@ router.get('/sendcode', function(req, res, next) {
             res.send({ "code": 0 })
         } else {
             //3. 返回响应数据
-            console.log(phone)
             res.send({ "code": 1, msg: '短信验证码发送失败' })
         }
     })
@@ -97,6 +96,7 @@ router.post('/login_sms', function(req, res, next) {
     var code = req.body.code;
     console.log('/login_sms', phone, code);
     if (users[phone] != code) {
+        console.log(users[phone])
         res.send({ code: 1, msg: '手机号或验证码不正确' });
         return;
     }

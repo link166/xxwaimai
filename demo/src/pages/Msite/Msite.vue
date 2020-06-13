@@ -66,6 +66,7 @@
         watch: {
             foodType(value) {
                 this.$nextTick(() => { //更新数据后，一旦界面更新，执行此函数
+                    console.log("running slide")
                     new swiper('.swiper-container', {
                         loop: true,
                         pagination: {
@@ -75,16 +76,20 @@
                 })
             }
         },
-        methods: {
-
-        },
+        methods: {},
         created() {
 
         },
         mounted() {
-
+            if (this.foodType) {
+                new swiper('.swiper-container', {
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination'
+                    }
+                })
+            }
         },
-
     }
 </script>
 <style lang='less' rel='stylesheet/less'>
